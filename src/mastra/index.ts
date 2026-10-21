@@ -1,8 +1,17 @@
 import { Mastra } from "@mastra/core";
-import { productBudgetAgent } from "./agents/product-budget-agent";
+import { researchAgent } from "./agents/research-agent";
+import { reportWriterAgent } from "./agents/report-writer-agent";
+import { researchReportWorkflow } from "./workflows/research-report-workflow";
+// import { productBudgetAgent } from "./agents/product-budget-agent";
 
 export const mastra = new Mastra({
   agents: {
-    productBudgetAgent,
+    // productBudgetAgent,
+    researchAgent,
+    reportWriterAgent,
+  },
+
+  workflows: {
+    researchReportWorkflow,
   },
 });
